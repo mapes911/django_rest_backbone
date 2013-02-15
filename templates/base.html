@@ -33,9 +33,21 @@
     </script>
 
     <script type="text/template" id="tpl-experience-details">
-        <h3><%= title %></h3>
-        <p><%= moral %></p>
-        <p>Chapters here later</p>
+        <label>Title:</label>
+        <input type="text" id="exp_title" name="title" value="<%= title %>" required />
+
+        <label>Moral:</label>
+        <input type="text" id="exp_moral" name="moral" value="<%= moral %>" required />
+
+        <br />
+        <button class="save">Save</button>
+        <button class="delete">Delete</button>
+
+        <h3>Chapters (not-editable for now)</h3>
+        <% _.each(chapters, function(chapter) { %> 
+            <h4><%= chapter.title %></h4>
+            <p><%= chapter.body %></p>
+        <% }); %>
     </script>
 
     <script src="{{STATIC_URL}}js/backbone_app/models/experience.js" type="text/javascript"></script>
@@ -67,8 +79,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="/">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#e/new">New</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>

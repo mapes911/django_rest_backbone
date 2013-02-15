@@ -4,6 +4,7 @@
 
         routes: {
             '': 'listExperiences',
+            'e/new': 'newExperience',
             'e/:id': 'experienceDetail'
         },
 
@@ -29,6 +30,13 @@
                 this.requestedID = id;
                 this.listExperiences();
             }
+        },
+
+        newExperience: function() {
+            if (!this.experienceList) this.listExperiences();
+            if (this.experienceView) this.experienceView.close();
+            this.experienceView = new suite101.ExperienceView({model:new suite101.Experience()});
+            $('#content').html(this.experienceView.render().el);
         }
 
     });

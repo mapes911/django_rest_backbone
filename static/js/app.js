@@ -3,7 +3,7 @@
     var suite101 = {
 
         initialize: function() {
-            var app = new suite101.AppRouter();
+            suite101.app = new suite101.AppRouter();
             Backbone.history.start();
         }
     };

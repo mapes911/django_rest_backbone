@@ -1,7 +1,13 @@
 (function(exports, undefined) {
 
     var Experience = Backbone.Model.extend({
-        url: '/api/experiences/'
+        urlRoot: '/api/experiences/',
+        defaults: {
+            'id': null,
+            'title': '',
+            'moral': '',
+            'chapters': []
+        }
     });
 
     var ExperienceCollection = Backbone.Collection.extend({
