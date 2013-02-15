@@ -3,5 +3,21 @@
 {% block title %}Hello World!{% endblock %}
 
 {% block content %}
-HELLO WORLD!!
+    <h2>Suite101 - Backbone Demo (Experiences)</h2>
+    <div id="content">
+        <p>
+        This is a demo application using Backbone.js
+        </p>
+    </div>
+
+    <div id="experience-list"></div>
+
+{% endblock %}
+
+{% block jquery %}
+
+    $(document).ready(function() {
+        suite101.initialize();
+    });
+    
 {% endblock %}

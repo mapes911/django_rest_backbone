@@ -1,0 +1,9 @@
+ul.experience-list {
+    list-style-type: none;
+    border-top: 1px solid #000;
+    padding-top: 20px;
+}
+li.experience-list-item {
+    display: inline-block;
+    width: 250px;
+}
